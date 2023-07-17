@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GeoMapping</title>
+</head>
+
+<body>
+    <h1>GeoMapping</h1>
+
+    <form method="POST" action="/view_map" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx">
+        <input type="submit" value="Upload and Map">
+    </form>
+
+    <hr>
+
+    <form method="POST" action="/view_map">
+        <label for="latitude">Latitude:</label><br>
+        <input type="text" id="latitude" name="latitude"><br>
+        <label for="longitude">Longitude:</label><br>
+        <input type="text" id="longitude" name="longitude"><br>
+        <input type="submit" value="Map">
+    </form>
+
+    {% if map_html %}
+    <div>
+        <h3>Map:</h3>
+        <iframe srcdoc="{{ map_html | safe }}" style="width: 100%; height: 600px; border: none;"></iframe>
+    </div>
+    {% endif %}
+
+</body>
+
+</html>
