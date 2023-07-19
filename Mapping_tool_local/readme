@@ -1,0 +1,8 @@
+Application Name: Geomapper
+
+Description:
+Geomapper is a web application that leverages the Flask framework to provide geospatial mapping functionalities. Users can input latitude and longitude coordinates directly into a form on the website or upload an Excel file containing multiple sets of coordinates distributed across various sheets.
+
+In each Excel sheet, the application identifies columns titled 'latitude', 'longitude', and 'city' (insensitive to casing) and uses these data points to create markers on an interactive map. If available, the city name is displayed as the marker name, adding an extra layer of information to the visual data.
+
+Once data is processed and the map is generated, it is displayed on the same page below the data upload section, allowing for an efficient and user-friendly experience. The application is especially useful for visualizing large datasets and can be used across various fields, including research, logistics, travel, and more.
